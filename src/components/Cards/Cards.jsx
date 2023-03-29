@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import Card from '../Card/Card';
+import Modal from '../Modal/Modal';
 
 const Cards = () => {
     const [cards, setCards] = useState([]);
@@ -16,7 +17,6 @@ const Cards = () => {
         }
         loadData()
     },[])
-    console.log(cards.length);
     return (
         <>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 my-6 lg:px-10'>
@@ -32,7 +32,7 @@ const Cards = () => {
                 <Button>Show All</Button>
                 </span>
             }
-            
+            <Modal></Modal>
         </>
     );
 };
